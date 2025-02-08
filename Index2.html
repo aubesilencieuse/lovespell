@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+    <title>Victoria's Secret - Siren Collaboration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .top-bar {
+            width: 200px;
+            height: 5px;
+            background-color: #c1afd0;
+            border-radius: 0 0 5px 5px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0px;
+        }
+
+        .bottom-bar {
+            width: 200px;
+            height: 5px;
+            background-color: #c1afd0;
+            border-radius: 5px 5px 0 0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -5px;
+        }
+
+        .header {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin: 10px 0;
+        }
+        .header h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+            color:#c1afd0;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 15px;
+            align-items: center; /* Centrage vertical */
+            height: 15px;
+            width: 600px;
+            background-color: #f8f8f8;
+            padding: 5px;
+            border-radius: 50px;
+            margin-top: 65px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: rgb(55, 55, 55);
+            padding: 0 15px;
+            font-size: 10px;
+            text-transform: lowercase;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 5px;
+            margin-top: 30px;
+        }
+
+        .tabs {
+            height: 378px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-right: 5px;
+        }
+
+        .tab {
+            width: 250px;
+            height: 100%;
+            background-color: #c1afd0;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            cursor: default; /* Désactive le clic */
+            border-radius: 25px 0 0 25px;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .tab i {
+            color: #ffffff;
+            font-size: 15px;
+            margin-right: 20px;
+        }
+
+        .tab-content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .tab h3 {
+            margin-right: 10px;
+            text-align: left;
+        }
+
+        .tab p {
+            margin-top: 0;
+            margin-left: 0;
+            margin-right: 10px;
+            font-size: 12px;
+            color: #555;
+            text-align: left;
+        }
+
+        .container {
+            width: 550px;
+            height: 375px;
+            position: relative;
+            display: block;
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            background-color: #f8f8f8;
+            border-radius: 0 25px 25px 0;
+            position: relative;
+            overflow: hidden;
+            background-image: url('path-to-your-background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            overflow-x: auto;
+            overflow-y: hidden; /* Empêche le défilement vertical */
+        }
+
+        .product-wrapper {
+            display: flex;
+            gap: 20px;
+            min-width: 100%;
+            flex-shrink: 0;
+        }
+
+        .product-details {
+            width: 500px;
+            height: 325px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 15px;
+            margin: 25px;
+            box-sizing: border-box;
+            border-radius: 0 25px 25px 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .product-image {
+            width: 270px; /* Taille de l'image */
+            height: 270px;
+            background-color: #ddd;
+            border-radius: 10px;
+            margin-right: 20px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-name {
+            font-size: 15px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            font-family: sans-serif;
+        }
+
+        .product-description {
+            font-size: 10px;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        .product-description2 {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .product-price-reference {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    color: #555;
+}
+
+.product-price {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.product-reference {
+    font-size: 12px;
+    color: #777;
+}
+
+        .add-to-cart {
+            width: 150px;
+            padding: 10px;
+            background-color: #c1afd0;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .add-to-cart:hover {
+            background-color: #bca1d2;
+        }
+
+        .box::-webkit-scrollbar {
+            height: 5px;
+        }
+
+        .box::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .box::-webkit-scrollbar-thumb {
+            background-color: #c1afd0;
+            border-radius: 10px;
+        }
+
+        .box::-webkit-scrollbar-thumb:hover {
+            background-color: #a48fb5;
+        }
+
+        /* Style pour le bouton - */
+#minus {
+    background-color: #cbcbcb; /* Couleur de fond */
+    border: 1px solid #ffffff; /* Bordure */
+    color: #fff; /* Couleur du texte */
+    font-size: 10px; /* Taille de la police */
+    width: 20px; /* Largeur */
+    height: 20px; /* Hauteur */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background-color 0.3s ease; /* Animation de la couleur de fond */
+}
+#plus {
+    background-color: #cbcbcb; /* Couleur de fond */
+    border: 1px solid #ffffff; /* Bordure */
+    color: #fff; /* Couleur du texte */
+    font-size: 10px; /* Taille de la police */
+    width: 20px; /* Largeur */
+    height: 20px; /* Hauteur */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background-color 0.3s ease; /* Animation de la couleur de fond */
+}
+
+/* Style pour l'input */
+input[type="number"] {
+    text-align: center; /* Centrer le texte dans l'input */
+    font-size: 10px; /* Taille du texte dans l'input */
+    width: 40px; /* Largeur de l'input */
+    height: 20px; /* Hauteur de l'input */
+    border: 1px solid #ffffff; /* Bordure de l'input */
+}
+
+/* Enlever les flèches */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+        input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+@media (max-width: 375px) {
+    body {
+        padding: 10px;
+        overflow-x: hidden; /* Empêche le débordement horizontal */
+    }
+
+    /* Assurez-vous que le header et la nav sont visibles */
+    .header, .nav {
+        display: block; /* S'assure qu'ils sont bien visibles */
+        width: 100%;
+        padding: 10px; /* Ajuste l'espacement si nécessaire */
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;  /* Taille réduite des titres */
+    }
+
+    /* Modifie la disposition de la barre de navigation */
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        display: flex;
+    }
+
+    .nav-bar {
+        font-size: 1.2rem;
+        padding: 5px 0;
+    }
+
+    /* Ajuste la présentation des contenus */
+    .content {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    /* Réduit la taille des tabs et les empile */
+    .tabs {
+        width: 100%;
+        display: block;
+        margin-bottom: 10px;
+        padding: 5px; /* Ajout d'un peu de padding pour les tabs */
+        box-sizing: border-box;
+    }
+
+    .tab {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px; /* Padding ajouté pour que le texte soit visible */
+        text-align: left; /* Alignement à gauche du texte dans les tabs */
+        font-size: 14px; /* Taille de police ajustée pour mobile */
+        background-color: #f0f0f0; /* Fond gris clair pour mieux voir le texte */
+        border-radius: 5px; /* Bords arrondis pour un meilleur design */
+    }
+
+    /* Ajuste la disposition des produits */
+    .product-wrapper {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px; /* Ajoute de l'espace entre les produits */
+    }
+
+    .product-details {
+        width: 100%;
+        margin: 15px 0;
+        flex-direction: column;
+    }
+
+    .product-image {
+        width: 100%; /* Adapte la largeur de l'image */
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .add-to-cart {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    /* Box et autres éléments */
+    .box {
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+        display: block;
+    }
+
+    /* Ajuste les boutons - */
+    #minus, #plus {
+        font-size: 12px;
+        width: 25px;
+        height: 25px;
+    }
+
+    /* Ajuste l'input quantity */
+    input[type="number"] {
+        width: 50px;
+        font-size: 12px;
+        height: 25px;
+    }
+
+    /* Gère l'espacement général pour une lecture fluide */
+    .container {
+        padding: 0 10px;
+    }
+
+    /* Réduction de la taille des textes pour plus de lisibilité */
+    p, span {
+        font-size: 14px;  /* Texte plus petit pour le mobile */
+    }
+
+    /* Footer si nécessaire */
+    .footer {
+        font-size: 12px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Optimisation pour éviter les débordements */
+    .scrollable-content {
+        max-width: 100%;
+        overflow-y: auto; /* Permet de défiler verticalement */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="top-bar"></div>
+
+    <div class="header">
+        <h1>Victoria's Secret</h1>
+        <h2>Siren Collaboration</h2>
+    </div>
+
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="https://raikohouse.my.canva.site/" target="_blank">Raiko House</a>
+        <a href="https://www.facebook.com/aubesilencieuse/" target="_blank">About Us</a>
+        <a href="https://ngl.link/afanen" target="_blank">Contact</a>
+        
+    </div>
+
+    <div class="content">
+        <div class="tabs">
+            <div class="tab">
+                <div class="tab-content">
+                    <i class="uil uil-envelope-heart" style="margin-left: 10px;"></i>
+                    <div>
+                        <h3 style="color: #ffffff;">Love Spell</h3>
+                        <p style="color: #ffffff; margin-top: -20px">A light mist that leaves a soft and irresistible trail on the skin.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="box" id="product-box">
+                <div class="product-wrapper">
+                    <!-- Product 1 -->
+                    <div class="product-details">
+                        <div class="product-image" style="background-image: url('lovespell1.jpg');"></div>
+                        <div>
+                            <div class="product-description">Body Fragrance</div>
+                            <div class="product-name">Love Spell Fragrance Mist</div>
+                            <div class="product-price-reference">
+                                <div class="product-price"><span class="price">24.99€</span></div>
+                                <div class="product-reference">V112047172017</div>
+                            </div>
+                            <div class="offer-details">
+                                <p style="font-size: 12px; color: #c96795;">le 3ème offert ! - <a href="#" style="color: #c96795;">Details</a></p>
+                            </div>
+                            <div class="product-description2">Cherry blossom, fresh peach. Impossible to resist.</div>
+                            <br/>
+                            <br/>
+                            
+                            <div class="quantity-selector">
+                                <button id="minus">-</button>
+<input id="quantity" type="number" value="1" min="1">
+<button id="plus">+</button>
+
+                            </div>
+                            <div class="add-to-cart">Ajouter au Panier</div>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="product-details">
+                        <div class="product-image" style="background-image: url('lovespell5.jpg');"></div>
+                        <div>
+                            <div class="product-description">Body Fragrance</div>
+                            <div class="product-name">Love Spell Shimmer Fragrance Mist</div>
+                            <div class="product-price-reference">
+                            <div class="product-price"><span class="price">19.95€</span></div>
+                            <div class="product-reference">26965612</div>
+                        </div>
+                            <div class="offer-details">
+                                <p style="font-size: 12px; color: #c96795;"><a href="#" style="color: #c96795;">Details</a></p>
+                            </div>
+                            <div class="product-description2">A mesmerizing melody of elegant blooms and nectarous fruits.</div>
+                            <br/>
+                            <br/>
+                            <div class="quantity-selector">
+                                <button>-</button>
+                                <input type="number" value="1" min="1">
+                                <button>+</button>
+                            </div>
+                            <div class="add-to-cart">Ajouter au Panier</div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-details">
+                        <div class="product-image" style="background-image: url('lovespell2.jpg');"></div>
+                        <div>
+                            <div class="product-description">Body Fragrance</div>
+                            <div class="product-name">Refreshing Gel Body Wash</div>
+                            <div class="product-price-reference">
+                            <div class="product-price"><span class="price">19.95€</span></div>
+                            <div class="product-reference">24596245</div>
+                        </div>
+                            <div class="offer-details">
+                                <p style="font-size: 12px; color: #c96795;"><a href="#" style="color: #c96795;">Details</a></p>
+                            </div>
+                            <div class="product-description2">A new way to wear your favorite scent.</div>
+                            <br/>
+                            <br/>
+                            <div class="quantity-selector">
+                                <button>-</button>
+                                <input type="number" value="1" min="1">
+                                <button>+</button>
+                            </div>
+                            <div class="add-to-cart">Ajouter au Panier</div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-details">
+                        <div class="product-image" style="background-image: url('lovespell3.jpg');"></div>
+                        <div>
+                            <div class="product-description">Body Fragrance</div>
+                            <div class="product-name">Body Lotion</div>
+                            <div class="product-price-reference">
+                            <div class="product-price"><span class="price">19.95€</span></div>
+                            <div class="product-reference">26625314</div>
+                        </div>
+                            <div class="offer-details">
+                                <p style="font-size: 12px; color: #c96795;">le 3ème offert ! - <a href="#" style="color: #c96795;">Details</a></p>
+                            </div>
+                            <div class="product-description2">Celebrate the collection that celebrates you.</div>
+                            <br/>
+                            <br/>
+                            <div class="quantity-selector">
+                                <button>-</button>
+                                <input type="number" value="1" min="1">
+                                <button>+</button>
+                            </div>
+                            <div class="add-to-cart">Ajouter au Panier</div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="product-details">
+                        <div class="product-image" style="background-image: url('lovespell4.jpg');"></div>
+                        <div>
+                            <div class="product-description">Body Fragrance</div>
+                            <div class="product-name">Shimmer Body Lotion</div>
+                            <div class="product-price-reference">
+                            <div class="product-price"><span class="price">19.95€</span></div>
+                            <div class="product-reference">26691508</div>
+                        </div>
+                            <div class="offer-details">
+                                <p style="font-size: 12px; color: #c96795;"><a href="#" style="color: #c96795;">Details</a></p>
+                            </div>
+                            <div class="product-description2">For every moment and every shimmering side of you.</div>
+                            <br/>
+                            <br/>
+                            <div class="quantity-selector">
+                                <button>-</button>
+                                <input type="number" value="1" min="1">
+                                <button>+</button>
+                            </div>
+                            <div class="add-to-cart">Ajouter au Panier</div>
+                        </div>
+                    </div>
+                    <!-- Product 7 -->
+                    <div class="product-details">
+                        <div class="product-image" style="background-image: url('lovespell7.jpeg');"></div>
+                        <div>
+                            <div class="product-description">VICTORIA'S SECRET</div>
+                            <div class="product-name">Scented Candle</div>
+                            <div class="product-price-reference">
+                            <div class="product-price"><span class="price">13.50€</span></div>
+                            <div class="product-reference">V112024625314</div>
+                        </div>
+                            <div class="offer-details">
+                                <p style="font-size: 12px; color: #c96795;"><a href="#" style="color: #c96795;">Details</a></p>
+                            </div>
+                            <div class="product-description2">Celebrate the collection that celebrates you.</div>
+                            <br/>
+                            <br/>
+                            <div class="quantity-selector">
+                                <button>-</button>
+                                <input type="number" value="1" min="1">
+                                <button>+</button>
+                            </div>
+                            <div class="add-to-cart">Ajouter au Panier</div>
+                        </div>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="product-details">
+                        <div class="product-image" style="background-image: url('lovespell6.jpg');"></div>
+                        <div>
+                            <div class="product-description">Body Fragrance</div>
+                            <div class="product-name">Love Spell & Clear Lip Glow</div>
+                            <div class="product-price-reference">
+                            <div class="product-price"><span class="price">15.00€</span></div>
+                            <div class="product-reference">25162895</div>
+                        </div>
+                            <div class="offer-details">
+                                <p style="font-size: 12px; color: #c96795;">Limited time offer - <a href="#" style="color: #c96795;">Details</a></p>
+                            </div>
+                            <div class="product-description2">Take your favorite scent and glowy 
+                                <br/>lip with you wherever you go for a flirtatious allure. </div>
+                            <br/>
+                            <div class="quantity-selector">
+                                <button>-</button>
+                                <input type="number" value="1" min="1">
+                                <button>+</button>
+                            </div>
+                            <div class="add-to-cart">Ajouter au Panier</div>
+                        </div>
+                    </div>
+                    <!-- Product 7 -->
+                    <div class="product-details">
+                        <div class="product-image" style="background-image: url('lovespell8.jpg');"></div>
+                        <div>
+                            <div class="product-description">Body Fragrance</div>
+                            <div class="product-name">Love Spell Body Set</div>
+                            <div class="product-price-reference">
+                            <div class="product-price"><span class="price">35.99€</span></div>
+                            <div class="product-reference">V111726442017</div>
+                        </div>
+                            <div class="offer-details">
+                                <p style="font-size: 12px; color: #c96795;"><a href="#" style="color: #c96795;">Details</a></p>
+                            </div>
+                            <div class="product-description2">Love Spell 3-Piece Body Set - exclusive.</div>
+                            <br/>
+                            <br/>
+                            <div class="quantity-selector">
+                                <button>-</button>
+                                <input type="number" value="1" min="1">
+                                <button>+</button>
+                            </div>
+                            <div class="add-to-cart">Ajouter au Panier</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-bar"></div>
+    <script>
+        document.getElementById('minus').addEventListener('click', function() {
+    var quantityInput = document.getElementById('quantity');
+    var currentValue = parseInt(quantityInput.value);
+    if (currentValue > 1) {
+        quantityInput.value = currentValue - 1;
+    }
+});
+
+document.getElementById('plus').addEventListener('click', function() {
+    var quantityInput = document.getElementById('quantity');
+    var currentValue = parseInt(quantityInput.value);
+    quantityInput.value = currentValue + 1;
+});
+
+    </script>
+</body>
+</html>
