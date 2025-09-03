@@ -62,7 +62,7 @@
             justify-content: center;
             gap: 5px;
             margin-bottom: 15px;
-            align-items: center; /* Centrage vertical */
+            align-items: center;         
             height: 15px;
             width: 600px;
             background-color: #f8f8f8;
@@ -103,7 +103,7 @@
             display: flex;
             align-items: center;
             padding-left: 10px;
-            cursor: default; /* Désactive le clic */
+            cursor: default;
             border-radius: 25px 0 0 25px;
             flex-direction: row;
             justify-content: flex-start;
@@ -157,7 +157,7 @@
             justify-content: flex-start;
             align-items: center;
             overflow-x: auto;
-            overflow-y: hidden; /* Empêche le défilement vertical */
+            overflow-y: hidden; 
         }
 
         .product-wrapper {
@@ -182,7 +182,7 @@
         }
 
         .product-image {
-            width: 270px; /* Taille de l'image */
+            width: 270px; 
             height: 270px;
             background-color: #ddd;
             border-radius: 10px;
@@ -266,33 +266,33 @@
 
         /* Style pour le bouton - */
 #minus {
-    background-color: #cbcbcb; /* Couleur de fond */
-    border: 1px solid #ffffff; /* Bordure */
-    color: #fff; /* Couleur du texte */
-    font-size: 10px; /* Taille de la police */
-    width: 20px; /* Largeur */
-    height: 20px; /* Hauteur */
-    cursor: pointer; /* Curseur pointer au survol */
-    transition: background-color 0.3s ease; /* Animation de la couleur de fond */
+    background-color: #cbcbcb; 
+    border: 1px solid #ffffff; 
+    color: #fff; 
+    font-size: 10px; 
+    width: 20px; 
+    height: 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 #plus {
-    background-color: #cbcbcb; /* Couleur de fond */
-    border: 1px solid #ffffff; /* Bordure */
-    color: #fff; /* Couleur du texte */
-    font-size: 10px; /* Taille de la police */
-    width: 20px; /* Largeur */
-    height: 20px; /* Hauteur */
-    cursor: pointer; /* Curseur pointer au survol */
-    transition: background-color 0.3s ease; /* Animation de la couleur de fond */
+    background-color: #cbcbcb; 
+    border: 1px solid #ffffff; 
+    color: #fff; 
+    font-size: 10px; 
+    width: 20px; 
+    height: 20px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
 /* Style pour l'input */
 input[type="number"] {
-    text-align: center; /* Centrer le texte dans l'input */
-    font-size: 10px; /* Taille du texte dans l'input */
-    width: 40px; /* Largeur de l'input */
-    height: 20px; /* Hauteur de l'input */
-    border: 1px solid #ffffff; /* Bordure de l'input */
+    text-align: center; 
+    font-size: 10px; 
+    width: 40px; 
+    height: 20px; 
+    border: 1px solid #ffffff; 
 }
 
 /* Enlever les flèches */
@@ -320,21 +320,21 @@ input[type="number"] {
 @media (max-width: 375px) {
     body {
         padding: 10px;
-        overflow-x: hidden; /* Empêche le débordement horizontal */
+        overflow-x: hidden; 
     }
 
-    /* Assurez-vous que le header et la nav sont visibles */
+    
     .header, .nav {
-        display: block; /* S'assure qu'ils sont bien visibles */
+        display: block; 
         width: 100%;
-        padding: 10px; /* Ajuste l'espacement si nécessaire */
+        padding: 10px; 
     }
 
     h1, h2 {
-        font-size: 1.5rem;  /* Taille réduite des titres */
+        font-size: 1.5rem;  
     }
 
-    /* Modifie la disposition de la barre de navigation */
+    
     .nav {
         flex-direction: column;
         width: 100%;
@@ -346,37 +346,37 @@ input[type="number"] {
         padding: 5px 0;
     }
 
-    /* Ajuste la présentation des contenus */
+    
     .content {
         flex-direction: column;
         margin-top: 15px;
     }
 
-    /* Réduit la taille des tabs et les empile */
+   
     .tabs {
         width: 100%;
         display: block;
         margin-bottom: 10px;
-        padding: 5px; /* Ajout d'un peu de padding pour les tabs */
+        padding: 5px; 
         box-sizing: border-box;
     }
 
     .tab {
         width: 100%;
         margin-bottom: 10px;
-        padding: 10px; /* Padding ajouté pour que le texte soit visible */
-        text-align: left; /* Alignement à gauche du texte dans les tabs */
-        font-size: 14px; /* Taille de police ajustée pour mobile */
-        background-color: #f0f0f0; /* Fond gris clair pour mieux voir le texte */
-        border-radius: 5px; /* Bords arrondis pour un meilleur design */
+        padding: 10px; 
+        text-align: left; 
+        font-size: 14px; 
+        background-color: #f0f0f0; 
+        border-radius: 5px; 
     }
 
-    /* Ajuste la disposition des produits */
+    
     .product-wrapper {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        margin-bottom: 20px; /* Ajoute de l'espace entre les produits */
+        margin-bottom: 20px; 
     }
 
     .product-details {
@@ -386,7 +386,7 @@ input[type="number"] {
     }
 
     .product-image {
-        width: 100%; /* Adapte la largeur de l'image */
+        width: 100%; 
         height: auto;
         margin-bottom: 15px;
     }
@@ -396,7 +396,7 @@ input[type="number"] {
         margin-top: 15px;
     }
 
-    /* Box et autres éléments */
+    
     .box {
         width: 100%;
         height: auto;
@@ -404,41 +404,41 @@ input[type="number"] {
         display: block;
     }
 
-    /* Ajuste les boutons - */
+    
     #minus, #plus {
         font-size: 12px;
         width: 25px;
         height: 25px;
     }
 
-    /* Ajuste l'input quantity */
+    
     input[type="number"] {
         width: 50px;
         font-size: 12px;
         height: 25px;
     }
 
-    /* Gère l'espacement général pour une lecture fluide */
+    
     .container {
         padding: 0 10px;
     }
 
-    /* Réduction de la taille des textes pour plus de lisibilité */
+    
     p, span {
-        font-size: 14px;  /* Texte plus petit pour le mobile */
+        font-size: 14px;  
     }
 
-    /* Footer si nécessaire */
+    
     .footer {
         font-size: 12px;
         padding: 10px;
         text-align: center;
     }
 
-    /* Optimisation pour éviter les débordements */
+    
     .scrollable-content {
         max-width: 100%;
-        overflow-y: auto; /* Permet de défiler verticalement */
+        overflow-y: auto; 
     }
 }
 
@@ -694,3 +694,4 @@ document.getElementById('plus').addEventListener('click', function() {
     </script>
 </body>
 </html>
+
